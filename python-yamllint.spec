@@ -1,6 +1,6 @@
 Name:		python-yamllint
-Version:	1.28.0
-Release:	2
+Version:	1.33.0
+Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/y/yamllint/yamllint-%{version}.tar.gz
 Summary:	A linter for YAML files.
 URL:		https://pypi.org/project/yamllint/
