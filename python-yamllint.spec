@@ -1,5 +1,5 @@
 Name:		python-yamllint
-Version:	1.33.0
+Version:	1.34.0
 Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/y/yamllint/yamllint-%{version}.tar.gz
 Summary:	A linter for YAML files.
