@@ -1,19 +1,25 @@
+%define module yamllint
+
 Name:		python-yamllint
-Version:	1.35.1
+Version:	1.37.1
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/source/y/yamllint/yamllint-%{version}.tar.gz
 Summary:	A linter for YAML files.
-URL:		https://pypi.org/project/yamllint/
 License:	GPLv3
 Group:		Development/Python
+URL:		https://pypi.org/project/yamllint/
+Source0:	https://files.pythonhosted.org/packages/source/y/%{module}/%{module}-%{version}.tar.gz
+BuildSystem:	python
+BuildArch:		noarch
 BuildRequires:	python%{pyver}dist(pip)
-BuildArch:	noarch
+BuildRequires:	python%{pyver}dist(setuptools)
 
 %description
 A linter for YAML files.
 
 %prep
-%autosetup -p1 -n yamllint-%{version}
+%autosetup -n %{module}-%{version} -p1
+# Remove bundled egg-info
+rm -rf %{module}.egg-info
 
 %build
 %py_build
@@ -22,6 +28,6 @@ A linter for YAML files.
 %py_install
 
 %files
-%{_bindir}/yamllint
-%{py_sitedir}/yamllint
-%{py_sitedir}/yamllint-*.*-info
+%{_bindir}/%{module}
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{module}-%{version}.dist-info
