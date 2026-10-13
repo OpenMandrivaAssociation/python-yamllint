@@ -2,7 +2,7 @@
 
 Name:		python-yamllint
 Version:	1.38.0
-Release:	1
+Release:	2
 Summary:	A linter for YAML files.
 License:	GPLv3
 Group:		Development/Python
